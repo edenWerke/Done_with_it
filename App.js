@@ -4,7 +4,8 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello world! thank God i am so happy today</Text>
+      {/* specfiy number of lines */}
+      <Text numberOfLines={2}>Hello world! thank God i am so happy today</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
