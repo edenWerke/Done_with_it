@@ -1,16 +1,21 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
 
 export default function App() {
   const handlePress = () => {
     console.log("text pressed");
   };
+
   return (
     <SafeAreaView style={styles.container}>
-      {/* specfiy number of lines */}
+      {/* Specify number of lines */}
       <Text numberOfLines={2} onPress={handlePress}>
-        Hello world! thank God i am so happy today
+        Hello world! Thank God I am so happy today.
       </Text>
+      <Image
+        source={require("./assets/adaptive-icon.png")}
+        style={styles.image}
+      />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -19,8 +24,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "red",
-    // alignItems: "center",
-    // justifyContent: "center",
+    backgroundColor: "dodgerblue",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  image: {
+    width: 100,
+    height: 100,
   },
 });
