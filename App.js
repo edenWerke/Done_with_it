@@ -13,6 +13,7 @@ export default function App() {
         Hello world! Thank God I am so happy today.
       </Text>
       <Image
+        blurRadius={5}
         source={{ uri: "https://picsum.photos/200/300" }}
         style={styles.image}
       />
