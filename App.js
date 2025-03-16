@@ -13,7 +13,7 @@ export default function App() {
         Hello world! Thank God I am so happy today.
       </Text>
       <Image
-        source={require("./assets/adaptive-icon.png")}
+        source={{ uri: "https://picsum.photos/200/300" }}
         style={styles.image}
       />
       <StatusBar style="auto" />
