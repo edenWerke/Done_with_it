@@ -25,16 +25,21 @@ export default function App() {
         color="orangered"
         title="click Me"
         onPress={() =>
-          Alert.alert("my Title", "Are you sure?", [
-            {
-              text: "Yes",
-              onPress: () => alert("you clicked yes"),
-            },
-            {
-              text: "No",
-              onPress: () => alert("you clicked no"),
-            },
-          ])
+          // Alert.alert("my Title", "Are you sure?", [
+          //   {
+          //     text: "Yes",
+          //     onPress: () => alert("you clicked yes"),
+          //   },
+          //   {
+          //     text: "No",
+          //     onPress: () => alert("you clicked no"),
+          //   },
+          // ])
+          Alert.prompt(
+            " my title",
+            "my message",
+            (text) => () => alert("hello  world")
+          )
         }
       />
     </SafeAreaView>
