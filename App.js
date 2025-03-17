@@ -6,13 +6,7 @@ import {
   Button,
   Alert,
   SafeAreaView,
-  TouchableWithoutFeedback,
-  TouchableOpacity,
-  TouchableHighlight,
-  TouchableNativeFeedback,
-  Image,
 } from "react-native";
-// import { Button } from "react-native-web";
 
 export default function App() {
   const handlePress = () => {
@@ -20,31 +14,28 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, containerStyle]}>
       <Button
         color="orangered"
-        title="click Me"
+        title="Click Me"
         onPress={() =>
-          // Alert.alert("my Title", "Are you sure?", [
-          //   {
-          //     text: "Yes",
-          //     onPress: () => alert("you clicked yes"),
-          //   },
-          //   {
-          //     text: "No",
-          //     onPress: () => alert("you clicked no"),
-          //   },
-          // ])
-          Alert.prompt(
-            " my title",
-            "my message",
-            (text) => () => alert("hello  world")
-          )
+          Alert.alert("My Title", "Are you sure?", [
+            {
+              text: "Yes",
+              onPress: () => alert("You clicked yes"),
+            },
+            {
+              text: "No",
+              onPress: () => alert("You clicked no"),
+            },
+          ])
         }
       />
     </SafeAreaView>
   );
 }
+
+const containerStyle = { backgroundColor: "yellow" };
 
 const styles = StyleSheet.create({
   container: {
@@ -52,9 +43,5 @@ const styles = StyleSheet.create({
     backgroundColor: "dodgerblue",
     alignItems: "center",
     justifyContent: "center",
-  },
-  image: {
-    width: 100,
-    height: 100,
   },
 });
