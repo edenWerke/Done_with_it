@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
   Text,
@@ -7,6 +7,7 @@ import {
   Alert,
   SafeAreaView,
   Platform,
+  StatusBar,
 } from "react-native";
 
 export default function App() {
@@ -38,13 +39,13 @@ export default function App() {
 }
 
 const containerStyle = { backgroundColor: "yellow" };
-
+//using the satus par in order to know the perfect padding
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "dodgerblue",
     // alignItems: "center",
     // justifyContent: "center",
-    paddingTop: Platform.OS === "android" ? 50 : 0,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
