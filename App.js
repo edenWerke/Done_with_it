@@ -6,6 +6,7 @@ import {
   Button,
   Alert,
   SafeAreaView,
+  Platform,
 } from "react-native";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
   };
 
   return (
+    // the right side over
     <SafeAreaView style={[styles.container, containerStyle]}>
       <Button
         color="orangered"
@@ -41,7 +43,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "dodgerblue",
-    alignItems: "center",
-    justifyContent: "center",
+    // alignItems: "center",
+    // justifyContent: "center",
+    paddingTop: Platform.OS === "android" ? 50 : 0,
   },
 });
