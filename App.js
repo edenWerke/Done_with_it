@@ -3,6 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Button,
   SafeAreaView,
   TouchableWithoutFeedback,
   TouchableOpacity,
@@ -10,6 +11,7 @@ import {
   TouchableNativeFeedback,
   Image,
 } from "react-native";
+// import { Button } from "react-native-web";
 
 export default function App() {
   const handlePress = () => {
@@ -18,27 +20,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Specify number of lines */}
-      <Text numberOfLines={2} onPress={handlePress}>
-        Hello world! Thank God I am so happy today.
-      </Text>
-      {/* events on the touchable with out feed back */}
-
-      <TouchableNativeFeedback
-        onPress={() => {
-          console.log("image Tapped");
-        }}
-      >
-        <View style={{ width: 200, height: 70, backgroundColor: "pink" }}>
-          {/* <Image
-        blurRadius={5}
-        fadeDuration={1000}
-        source={{ uri: "https://picsum.photos/200/300" }}
-        style={styles.image}
-      /> */}
-        </View>
-      </TouchableNativeFeedback>
-      <StatusBar style="auto" />
+      <Button title="click Me" onPress={() => alert("hello world")} />
     </SafeAreaView>
   );
 }
