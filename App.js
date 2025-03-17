@@ -4,6 +4,7 @@ import {
   Text,
   View,
   Button,
+  Alert,
   SafeAreaView,
   TouchableWithoutFeedback,
   TouchableOpacity,
@@ -20,7 +21,22 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Button title="click Me" onPress={() => alert("hello world")} />
+      <Button
+        color="orangered"
+        title="click Me"
+        onPress={() =>
+          Alert.alert("my Title", "Are you sure?", [
+            {
+              text: "Yes",
+              onPress: () => alert("you clicked yes"),
+            },
+            {
+              text: "No",
+              onPress: () => alert("you clicked no"),
+            },
+          ])
+        }
+      />
     </SafeAreaView>
   );
 }
