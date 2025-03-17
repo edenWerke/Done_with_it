@@ -1,5 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  TouchableWithoutFeedback,
+  Image,
+} from "react-native";
 
 export default function App() {
   const handlePress = () => {
@@ -12,11 +19,20 @@ export default function App() {
       <Text numberOfLines={2} onPress={handlePress}>
         Hello world! Thank God I am so happy today.
       </Text>
-      <Image
-        blurRadius={5}
-        source={{ uri: "https://picsum.photos/200/300" }}
-        style={styles.image}
-      />
+      {/* events on the touchable with out feed back */}
+
+      <TouchableWithoutFeedback
+        onPress={() => {
+          alert("image Tapped");
+        }}
+      >
+        <Image
+          blurRadius={5}
+          fadeDuration={1000}
+          source={{ uri: "https://picsum.photos/200/300" }}
+          style={styles.image}
+        />
+      </TouchableWithoutFeedback>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
