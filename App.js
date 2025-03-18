@@ -24,13 +24,30 @@ export default function App() {
         flex: 1,
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center",
+        alignContent: "center",
+        flexWrap: "wrap",
       }}
     >
       <View
         style={{
           backgroundColor: "gold",
-          alignSelf: "flex-start",
+
+          width: 100,
+          height: 100,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: "gray",
+
+          width: 100,
+          height: 100,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: "pink",
+
           width: 100,
           height: 100,
         }}
