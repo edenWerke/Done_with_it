@@ -5,6 +5,7 @@ function ViewImageScreen(props) {
   return (
     <View style={styles.container}>
       <View style={styles.CloseIcon}></View>
+      <View style={styles.deleteIcon}></View>
       <Image style={styles.image} source={require("../assets/cloth.jpg")} />
     </View>
   );
@@ -27,6 +28,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 40,
     left: 30,
+  },
+  deleteIcon: {
+    width: 50,
+    height: 50,
+    backgroundColor: "dodgerblue",
+    position: "absolute",
+    top: 40,
+    right: 30,
   },
 });
 
