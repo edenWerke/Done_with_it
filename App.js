@@ -1,6 +1,7 @@
 // import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
+  Dimensions,
   Text,
   View,
   Button,
@@ -11,6 +12,7 @@ import {
 } from "react-native";
 
 export default function App() {
+  console.log(Dimensions.get("screen"));
   const handlePress = () => {
     console.log("text pressed");
   };
@@ -18,7 +20,7 @@ export default function App() {
   return (
     // the right side over
     <SafeAreaView style={[styles.container, containerStyle]}>
-      <Button
+      {/* <Button
         color="orangered"
         title="Click Me"
         onPress={() =>
@@ -33,7 +35,10 @@ export default function App() {
             },
           ])
         }
-      />
+      /> */}
+      <View
+        style={{ backgroundColor: "darkblue", width: "100%", height: "30%" }}
+      ></View>
     </SafeAreaView>
   );
 }
@@ -49,3 +54,4 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
+//LAYOUTS
