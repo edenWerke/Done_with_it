@@ -10,9 +10,14 @@ import {
   Platform,
   StatusBar,
 } from "react-native";
+//using perfect dimensions
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 
 export default function App() {
-  console.log(Dimensions.get("screen"));
+  const { landscape } = useDeviceOrientation();
   const handlePress = () => {
     console.log("text pressed");
   };
@@ -37,7 +42,11 @@ export default function App() {
         }
       /> */}
       <View
-        style={{ backgroundColor: "darkblue", width: "100%", height: "30%" }}
+        style={{
+          backgroundColor: "darkblue",
+          width: "100%",
+          height: landscape ? "100%" : "30%",
+        }}
       ></View>
     </SafeAreaView>
   );
